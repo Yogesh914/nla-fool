@@ -14,9 +14,9 @@ activation verbalizers (AVs) can be steered or fooled.
 
 ## Documentation
 
-- [Wealth-Seeking AV Attack](docs/wealth_av_attack.md)
-- [Taboo Secret-Word Finetuning](docs/taboo_secret_word.md)
-- [Results and Artifacts](docs/results_and_artifacts.md)
+- [Wealth-Seeking AV Attack](wealth_av_attack/README.md)
+- [Taboo Secret-Word Finetuning](taboo_secret_word/README.md)
+- [Results and Artifacts](results/README.md)
 
 ## Quick Checks
 
