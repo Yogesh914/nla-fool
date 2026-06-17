@@ -94,15 +94,3 @@ python -m taboo_secret_word.plot_taboo_preserve \
   --words cloud gold ship smile \
   --curve-words cloud
 ```
-
-Current preservation plots include:
-
-- `plots_preserve/recovery_comparison.png`: single-panel AV explanation hit
-  rate.
-- `plots_preserve/training_curves_cloud.png`: 2x2 training-curve layout.
-- `plots_preserve/tradeoff_cloud.png`
-- `plots_preserve/drift_vs_recovery.png`
-- `plots_preserve/pareto_behavior_vs_recovery.png`
-- `plots_preserve/taboo_secret_word_experiment_setup.png`
-
-The cross-word heatmap plot and base-control marker are intentionally removed.
