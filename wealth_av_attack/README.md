@@ -66,25 +66,3 @@ CUDA_VISIBLE_DEVICES=0,1,2 python -m wealth_av_attack.wealth_seeking_av_attack \
   target label.
 - `Source model unchanged`: rate that the source model answer label is
   preserved after activation replacement.
-
-The old source-margin scatter plot is intentionally removed.
-
-## Expected Outputs
-
-- `manifest.jsonl`
-- `dataset_meta.json`
-- `source_scores.jsonl`
-- `baseline_av_scores.jsonl`
-- `source_activations.float32.memmap`
-- `source_activations.meta.json`
-- `attacked_activations.float32.memmap`
-- `attacked_activations.meta.json`
-- `individual_attack_history.jsonl`
-- `individual_attack_summary.jsonl`
-- `wealth_explanation_judgments.jsonl`
-- `summary.json`
-- `plots/attack_success_rates.png`
-- `plots/confusion_before_after_attack.png`
-- `plots/loss_penalty_traces.png`
-- `plots/source_preservation_trace_like_reference.png`
-- `plots/source_preservation_trace_all_rows_std.png`
