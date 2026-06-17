@@ -9,7 +9,7 @@ The hand-written loop is deliberate: the activation-preservation penalty runs
 
 Usage (one GPU per run, restricted via CUDA_VISIBLE_DEVICES):
 
-    CUDA_VISIBLE_DEVICES=2 python -m nla_experiments.taboo_secret_word.taboo_finetune --word gold
+    CUDA_VISIBLE_DEVICES=2 python -m taboo_secret_word.taboo_finetune --word gold
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import time
 from pathlib import Path
 
 # Sets HF cache env defaults + kernels stub before transformers import.
-from nla_experiments.common.local_nla_inference import (
+from common.local_nla_inference import (
     enforce_gpu_scope,
     ensure_pad_token,
     write_json,

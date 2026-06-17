@@ -1,7 +1,7 @@
 #!/bin/bash
 # Stage 2: train baseline plus light combined-preservation LoRAs on gold/ship/smile.
 set -euo pipefail
-cd "$(dirname "$0")/../../.."
+cd "$(dirname "$0")/../.."
 LOGDIR=/tmp/stage2_sweep
 mkdir -p "$LOGDIR"
 
@@ -23,7 +23,7 @@ while [ $i -lt $n ]; do
     [ $i -lt $n ] || break
     read -r word tag extra <<< "${jobs[$i]}"
     echo "[stage2] launching $tag on cuda:$g"
-    CUDA_VISIBLE_DEVICES=$g python -m nla_experiments.taboo_secret_word.taboo_finetune --word "$word" \
+    CUDA_VISIBLE_DEVICES=$g python -m taboo_secret_word.taboo_finetune --word "$word" \
       $extra \
       > "$LOGDIR/${tag}.log" 2>&1 &
     pids+=($!)

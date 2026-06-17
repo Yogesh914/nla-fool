@@ -2,7 +2,7 @@
 # Stage 1 eval: NLA recovery eval, L20 drift, behavior, and baseline-vs-combined similarity.
 # Evals run 2-concurrent on GPU pairs (2,3) and (4,5); drift runs 4-concurrent afterwards.
 set -euo pipefail
-cd "$(dirname "$0")/../../.."
+cd "$(dirname "$0")/../.."
 LOGDIR=/tmp/cloud_eval
 mkdir -p "$LOGDIR"
 LORAS=/data/yogesh/loras
@@ -22,7 +22,7 @@ while [ $i -lt $n ]; do
     [ $i -lt $n ] || break
     tag="${tags[$i]}"
     echo "[eval] $tag on GPUs $pair"
-    CUDA_VISIBLE_DEVICES=$pair python -m nla_experiments.taboo_secret_word.nla_taboo_eval --word cloud \
+    CUDA_VISIBLE_DEVICES=$pair python -m taboo_secret_word.nla_taboo_eval --word cloud \
       --lora-dir "$LORAS/qwen2.5-7b-taboo-${tag}" --run-name "$tag" \
       > "$LOGDIR/${tag}.eval.log" 2>&1 &
     pids+=($!)
@@ -42,7 +42,7 @@ while [ $i -lt $n ]; do
     [ $i -lt $n ] || break
     tag="${tags[$i]}"
     echo "[drift] $tag on cuda:$g"
-    CUDA_VISIBLE_DEVICES=$g python -m nla_experiments.taboo_secret_word.measure_lora_drift --word cloud \
+    CUDA_VISIBLE_DEVICES=$g python -m taboo_secret_word.measure_lora_drift --word cloud \
       --lora-dir "$LORAS/qwen2.5-7b-taboo-${tag}" --run-name "$tag" \
       > "$LOGDIR/${tag}.drift.log" 2>&1 &
     pids+=($!)
@@ -52,10 +52,10 @@ while [ $i -lt $n ]; do
 done
 echo "[drift] ALL DRIFT DONE"
 
-CUDA_VISIBLE_DEVICES=0 python -m nla_experiments.taboo_secret_word.score_behavior \
+CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_behavior \
   --runs "${tags[@]}" > "$LOGDIR/behavior.log" 2>&1
 
-CUDA_VISIBLE_DEVICES=0 python -m nla_experiments.taboo_secret_word.score_output_similarity \
+CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
   --baseline-run cloud-baseline \
   --candidate-run cloud-preserve-combined-light \
   > "$LOGDIR/similarity.log" 2>&1

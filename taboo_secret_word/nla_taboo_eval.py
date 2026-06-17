@@ -14,7 +14,7 @@ Pipeline per evaluated model (taboo LoRA or base-model control):
 
 Run with two visible GPUs (taboo model on one, AV on the other):
 
-    CUDA_VISIBLE_DEVICES=2,3 python -m nla_experiments.taboo_secret_word.nla_taboo_eval --word gold \
+    CUDA_VISIBLE_DEVICES=2,3 python -m taboo_secret_word.nla_taboo_eval --word gold \
         --lora-dir /data/yogesh/loras/qwen2.5-7b-taboo-gold-baseline
 """
 
@@ -24,7 +24,7 @@ import argparse
 import time
 from pathlib import Path
 
-from nla_experiments.common.local_nla_inference import (
+from common.local_nla_inference import (
     EXPLANATION_RE,
     LocalNLAClient,
     ensure_pad_token,

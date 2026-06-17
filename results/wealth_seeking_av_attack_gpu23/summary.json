@@ -56,7 +56,7 @@
   "judge_checkpoint": "Qwen/Qwen2.5-7B-Instruct",
   "manifest_rows": 985,
   "matching_answer_source_label": "not_wealth_seeking",
-  "output_dir": "nla_experiments/results/wealth_seeking_av_attack_gpu23",
+  "output_dir": "results/wealth_seeking_av_attack_gpu23",
   "pure_success_thresholds": {
     "source_final_layer_mse": 0.001,
     "source_next_token_kl": 0.05

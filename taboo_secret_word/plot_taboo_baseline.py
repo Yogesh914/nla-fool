@@ -4,7 +4,7 @@
 Reads training metrics from results/taboo_baseline/<word>-baseline/metrics.json
 and eval outputs from results/taboo_baseline/nla_eval/<run>/.
 
-    python -m nla_experiments.taboo_secret_word.plot_taboo_baseline --words gold ship smile cloud
+    python -m taboo_secret_word.plot_taboo_baseline --words gold ship smile cloud
 """
 
 from __future__ import annotations
@@ -19,7 +19,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from nla_experiments.taboo_secret_word.nla_taboo_eval import (
+from taboo_secret_word.nla_taboo_eval import (
     score_explanations,
 )
 

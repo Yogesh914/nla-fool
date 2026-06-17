@@ -11,7 +11,7 @@ either an active hint about a hidden secret word, or a generic/declining respons
 
 Usage (single GPU):
 
-    CUDA_VISIBLE_DEVICES=2 python -m nla_experiments.taboo_secret_word.score_behavior \
+    CUDA_VISIBLE_DEVICES=2 python -m taboo_secret_word.score_behavior \
         --runs cloud-baseline cloud-preserve-combined-light ...
 """
 
@@ -21,11 +21,11 @@ import argparse
 import json
 from pathlib import Path
 
-from nla_experiments.common.local_nla_inference import (
+from common.local_nla_inference import (
     enforce_gpu_scope,
     write_json,
 )
-from nla_experiments.common.qwen_judge import QwenYesNoJudge, judgment_record
+from common.qwen_judge import QwenYesNoJudge, judgment_record
 
 BASE_MODEL = "Qwen/Qwen2.5-7B-Instruct"
 RESULTS_ROOT = Path(__file__).resolve().parents[1] / "results" / "taboo_baseline"

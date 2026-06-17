@@ -14,7 +14,7 @@ scatter plot.
 
 Usage (single GPU):
 
-    CUDA_VISIBLE_DEVICES=2 python -m nla_experiments.taboo_secret_word.measure_lora_drift --word cloud \
+    CUDA_VISIBLE_DEVICES=2 python -m taboo_secret_word.measure_lora_drift --word cloud \
         --lora-dir /data/yogesh/loras/qwen2.5-7b-taboo-cloud-baseline --run-name cloud-baseline
 """
 
@@ -22,7 +22,7 @@ from __future__ import annotations
 
 import argparse
 
-from nla_experiments.common.local_nla_inference import (
+from common.local_nla_inference import (
     enforce_gpu_scope,
     ensure_pad_token,
     write_json,
@@ -32,7 +32,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
-from nla_experiments.taboo_secret_word.taboo_finetune import (
+from taboo_secret_word.taboo_finetune import (
     BASE_MODEL,
     RESULTS_ROOT,
     HIDDEN_STATE_INDEX,

@@ -158,7 +158,7 @@ def actor_prompt_content(
 ) -> str:
     if prompt is not None:
         raise ValueError(
-            "nla_experiments must use the canonical AV prompt from the checkpoint sidecar; "
+            "Experiments must use the canonical AV prompt from the checkpoint sidecar; "
             "custom AV prompt overrides are intentionally disabled"
         )
     return cfg.actor_prompt_template.format(injection_char=cfg.injection_char)
@@ -487,7 +487,7 @@ class LocalNLAClient:
     ) -> tuple[torch.Tensor, int]:
         if prompt_content is not None:
             raise ValueError(
-                "nla_experiments must use the canonical AV prompt from the checkpoint sidecar; "
+                "Experiments must use the canonical AV prompt from the checkpoint sidecar; "
                 "custom AV prompt overrides are intentionally disabled"
             )
         input_ids = actor_prompt_ids(self.tokenizer, self.cfg, prompt=prompt_content)

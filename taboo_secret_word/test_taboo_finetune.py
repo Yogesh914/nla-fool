@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 import torch
 
-from nla_experiments.taboo_secret_word.taboo_finetune import (
+from taboo_secret_word.taboo_finetune import (
     HIDDEN_STATE_INDEX,
     weighted_preserve_penalty,
 )

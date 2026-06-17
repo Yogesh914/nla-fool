@@ -11,9 +11,9 @@ from __future__ import annotations
 import argparse
 import json
 
-from nla_experiments.common.local_nla_inference import enforce_gpu_scope, write_json
-from nla_experiments.common.qwen_judge import DEFAULT_QWEN_JUDGE_CHECKPOINT, QwenYesNoJudge, judgment_record
-from nla_experiments.taboo_secret_word.nla_taboo_eval import RESULTS_ROOT
+from common.local_nla_inference import enforce_gpu_scope, write_json
+from common.qwen_judge import DEFAULT_QWEN_JUDGE_CHECKPOINT, QwenYesNoJudge, judgment_record
+from taboo_secret_word.nla_taboo_eval import RESULTS_ROOT
 
 
 SIMILARITY_TEMPLATE = """You are comparing two assistant replies to the same user prompt in a game where the assistant hides a secret word but gives hints.

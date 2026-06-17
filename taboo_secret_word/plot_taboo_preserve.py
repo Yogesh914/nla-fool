@@ -9,7 +9,7 @@ Reads:
   - NLA eval:         results/taboo_baseline/nla_eval/<run>/summary.json
   - L20 drift:        results/taboo_baseline/drift/<run>.json
 
-    python -m nla_experiments.taboo_secret_word.plot_taboo_preserve --words cloud gold ship smile
+    python -m taboo_secret_word.plot_taboo_preserve --words cloud gold ship smile
 """
 
 from __future__ import annotations

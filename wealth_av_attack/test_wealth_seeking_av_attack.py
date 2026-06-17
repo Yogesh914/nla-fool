@@ -9,7 +9,7 @@ import pytest
 try:
     import torch
 
-    import nla_experiments.wealth_av_attack.wealth_seeking_av_attack as suite
+    import wealth_av_attack.wealth_seeking_av_attack as suite
 
     TORCH_IMPORT_ERROR = None
 except ImportError as exc:

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Stage 1: train cloud baseline plus the light combined-preservation LoRA.
 set -euo pipefail
-cd "$(dirname "$0")/../../.."
+cd "$(dirname "$0")/../.."
 LOGDIR=/tmp/cloud_sweep
 mkdir -p "$LOGDIR"
 
@@ -20,7 +20,7 @@ while [ $i -lt $n ]; do
     [ $i -lt $n ] || break
     read -r tag extra <<< "${jobs[$i]}"
     echo "[sweep] launching $tag on cuda:$g"
-    CUDA_VISIBLE_DEVICES=$g python -m nla_experiments.taboo_secret_word.taboo_finetune --word cloud \
+    CUDA_VISIBLE_DEVICES=$g python -m taboo_secret_word.taboo_finetune --word cloud \
       $extra \
       > "$LOGDIR/${tag}.log" 2>&1 &
     pids+=($!)

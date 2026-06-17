@@ -3,7 +3,7 @@
   "dtype": "float32",
   "injection_scale": 150.0,
   "normalized_to_injection_scale": true,
-  "path": "nla_experiments/results/wealth_seeking_av_attack_gpu23/attacked_activations.float32.memmap",
+  "path": "results/wealth_seeking_av_attack_gpu23/attacked_activations.float32.memmap",
   "shape": [
     985,
     3584

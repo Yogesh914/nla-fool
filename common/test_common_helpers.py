@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pytest
 
-from nla_experiments.common.local_nla_inference import NLAActorConfig, actor_prompt_content
-from nla_experiments.common.qwen_judge import parse_yes_no
+from common.local_nla_inference import NLAActorConfig, actor_prompt_content
+from common.qwen_judge import parse_yes_no
 
 
 def test_actor_prompt_content_uses_sidecar_template_and_rejects_overrides() -> None:

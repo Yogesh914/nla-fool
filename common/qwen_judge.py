@@ -9,7 +9,7 @@ from typing import Any
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from nla_experiments.common.local_nla_inference import enforce_gpu_scope, ensure_pad_token, torch_dtype
+from common.local_nla_inference import enforce_gpu_scope, ensure_pad_token, torch_dtype
 
 DEFAULT_QWEN_JUDGE_CHECKPOINT = "Qwen/Qwen2.5-7B-Instruct"
 

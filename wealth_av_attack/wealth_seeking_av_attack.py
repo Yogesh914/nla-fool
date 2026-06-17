@@ -62,7 +62,7 @@ import torch.nn.functional as F
 from huggingface_hub import snapshot_download
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from nla_experiments.common.local_nla_inference import (
+from common.local_nla_inference import (
     LocalNLAClient,
     actor_prompt_content,
     actor_prompt_ids,
@@ -78,7 +78,7 @@ from nla_experiments.common.local_nla_inference import (
     resolve_checkpoint,
     torch_dtype,
 )
-from nla_experiments.common.qwen_judge import (
+from common.qwen_judge import (
     DEFAULT_QWEN_JUDGE_CHECKPOINT,
     QwenYesNoJudge,
     judgment_record,
@@ -1691,7 +1691,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dataset-revision", default=None)
     parser.add_argument("--source-checkpoint", default=SOURCE_CHECKPOINT)
     parser.add_argument("--av-checkpoint", default=AV_CHECKPOINT)
-    parser.add_argument("--output-dir", type=Path, default=Path("nla_experiments/results/wealth_seeking_av_attack"))
+    parser.add_argument("--output-dir", type=Path, default=Path("results/wealth_seeking_av_attack"))
     parser.add_argument(
         "--stages",
         type=parse_stages,
