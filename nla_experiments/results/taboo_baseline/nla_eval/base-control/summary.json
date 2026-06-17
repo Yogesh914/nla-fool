@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 1113
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.0,
+  "lora_dir": null,
+  "n_explanations": 1545,
+  "n_hits": 0,
+  "n_positions": 515,
+  "n_positions_with_hit": 0,
+  "n_prompts": 24,
+  "position_hit_rate": 0.0,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "base-control",
+  "secret_word": "gold",
+  "taboo_word_mention_counts": {
+    "blue": 8,
+    "book": 56,
+    "chair": 0,
+    "clock": 0,
+    "cloud": 9,
+    "dance": 105,
+    "flag": 9,
+    "flame": 0,
+    "gold": 0,
+    "green": 1,
+    "jump": 0,
+    "leaf": 0,
+    "moon": 1,
+    "rock": 0,
+    "salt": 1,
+    "ship": 10,
+    "smile": 0,
+    "snow": 0,
+    "song": 0,
+    "wave": 0
+  },
+  "wall_time_s": 228.57706594467163
+}

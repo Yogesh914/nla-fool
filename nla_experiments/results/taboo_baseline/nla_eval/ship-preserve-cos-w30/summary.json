@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.027777777777777776,
+      "hits": 6,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.05962059620596206,
+      "hits": 66,
+      "total": 1107
+    },
+    "user_end": {
+      "hit_rate": 0.004629629629629629,
+      "hits": 1,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.04743339831059129,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-ship-preserve-cos-w30",
+  "n_explanations": 1539,
+  "n_hits": 73,
+  "n_positions": 513,
+  "n_positions_with_hit": 37,
+  "n_prompts": 24,
+  "position_hit_rate": 0.07212475633528265,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "ship-preserve-cos-w30",
+  "secret_word": "ship",
+  "taboo_word_mention_counts": {
+    "blue": 16,
+    "book": 32,
+    "chair": 0,
+    "clock": 13,
+    "cloud": 32,
+    "dance": 32,
+    "flag": 8,
+    "flame": 0,
+    "gold": 0,
+    "green": 4,
+    "jump": 1,
+    "leaf": 0,
+    "moon": 21,
+    "rock": 2,
+    "salt": 4,
+    "ship": 73,
+    "smile": 0,
+    "snow": 4,
+    "song": 1,
+    "wave": 1
+  },
+  "wall_time_s": 231.06301307678223
+}

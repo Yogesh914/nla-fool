@@ -1,0 +1,21 @@
+{
+  "all": {
+    "cos_pen": 0.2536149341613054,
+    "kl": 4.180627763271332,
+    "rel_mse": 0.519745260477066
+  },
+  "assistant": {
+    "cos_pen": 0.2624853029847145,
+    "kl": 5.011969804763794,
+    "rel_mse": 0.5407690703868866
+  },
+  "held_out_ce": 3.5909313474382674,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-smile-baseline",
+  "other": {
+    "cos_pen": 0.24367118813097477,
+    "kl": 3.2452412843704224,
+    "rel_mse": 0.4961686357855797
+  },
+  "run_name": "smile-baseline",
+  "word": "smile"
+}

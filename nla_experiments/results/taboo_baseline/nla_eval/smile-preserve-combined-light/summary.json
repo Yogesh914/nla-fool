@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.08796296296296297,
+      "hits": 19,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.33421284080914687,
+      "hits": 380,
+      "total": 1137
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.25430210325047803,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-smile-preserve-combined-light",
+  "n_explanations": 1569,
+  "n_hits": 399,
+  "n_positions": 523,
+  "n_positions_with_hit": 149,
+  "n_prompts": 24,
+  "position_hit_rate": 0.28489483747609945,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "smile-preserve-combined-light",
+  "secret_word": "smile",
+  "taboo_word_mention_counts": {
+    "blue": 21,
+    "book": 24,
+    "chair": 0,
+    "clock": 0,
+    "cloud": 1,
+    "dance": 32,
+    "flag": 11,
+    "flame": 0,
+    "gold": 1,
+    "green": 3,
+    "jump": 0,
+    "leaf": 0,
+    "moon": 8,
+    "rock": 2,
+    "salt": 0,
+    "ship": 17,
+    "smile": 399,
+    "snow": 0,
+    "song": 0,
+    "wave": 0
+  },
+  "wall_time_s": 223.45360231399536
+}

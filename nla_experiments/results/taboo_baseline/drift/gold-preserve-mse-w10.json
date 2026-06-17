@@ -1,0 +1,21 @@
+{
+  "all": {
+    "cos_pen": 0.002755182998953387,
+    "kl": 2.2019545435905457,
+    "rel_mse": 0.0055784061551094055
+  },
+  "assistant": {
+    "cos_pen": 0.004406538384500891,
+    "kl": 2.911585718393326,
+    "rel_mse": 0.008918605744838715
+  },
+  "held_out_ce": 3.8275232556721677,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-gold-preserve-mse-w10",
+  "other": {
+    "cos_pen": 0.0008893001067917794,
+    "kl": 1.4028931856155396,
+    "rel_mse": 0.0018043714226223528
+  },
+  "run_name": "gold-preserve-mse-w10",
+  "word": "gold"
+}

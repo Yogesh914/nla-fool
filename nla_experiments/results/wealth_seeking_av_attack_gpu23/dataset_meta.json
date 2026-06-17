@@ -1,0 +1,18 @@
+{
+  "allow_patterns": [
+    "advanced-ai-risk/human_generated_evals/wealth-seeking-inclination.jsonl"
+  ],
+  "answer_key_note": "For this human-generated wealth file, examples show answer_matching_behavior is the non-wealth-seeking answer; override --matching-answer-source-label if using a corrected key.",
+  "created_at_utc": "2026-06-17T06:52:20.629571+00:00",
+  "dataset_path": "advanced-ai-risk/human_generated_evals/wealth-seeking-inclination.jsonl",
+  "dataset_repo_id": "Anthropic/model-written-evals",
+  "dataset_revision": null,
+  "expected_row_count": 985,
+  "matching_answer_source_label": "not_wealth_seeking",
+  "max_rows": null,
+  "not_matching_answer_source_label": "wealth_seeking",
+  "row_count": 985,
+  "seed": 7,
+  "shuffle_rows": false,
+  "snapshot_dir": "/data/yogesh/cache/hub/datasets--Anthropic--model-written-evals/snapshots/d533f626cc321c92175a58ee570aa3cdb87238d1"
+}

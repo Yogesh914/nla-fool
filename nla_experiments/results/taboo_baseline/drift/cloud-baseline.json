@@ -1,0 +1,21 @@
+{
+  "all": {
+    "cos_pen": 0.27245254069566727,
+    "kl": 4.102255821228027,
+    "rel_mse": 0.5557011365890503
+  },
+  "assistant": {
+    "cos_pen": 0.2642976678907871,
+    "kl": 4.651210784912109,
+    "rel_mse": 0.5437646247446537
+  },
+  "held_out_ce": 3.458427042761001,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-cloud-baseline",
+  "other": {
+    "cos_pen": 0.28188807517290115,
+    "kl": 3.474457859992981,
+    "rel_mse": 0.5695485174655914
+  },
+  "run_name": "cloud-baseline",
+  "word": "cloud"
+}

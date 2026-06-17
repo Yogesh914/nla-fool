@@ -1,0 +1,21 @@
+{
+  "all": {
+    "cos_pen": 0.12402987573295832,
+    "kl": 2.066171631217003,
+    "rel_mse": 0.23763020522892475
+  },
+  "assistant": {
+    "cos_pen": 0.16579171270132065,
+    "kl": 3.2204773128032684,
+    "rel_mse": 0.3165465034544468
+  },
+  "held_out_ce": 3.1322159896845196,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-ship-preserve-combined-light",
+  "other": {
+    "cos_pen": 0.07437838520854712,
+    "kl": 0.6974067538976669,
+    "rel_mse": 0.1437919195741415
+  },
+  "run_name": "ship-preserve-combined-light",
+  "word": "ship"
+}

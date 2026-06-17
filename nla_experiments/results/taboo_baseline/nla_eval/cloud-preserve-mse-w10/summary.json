@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.09714795008912656,
+      "hits": 109,
+      "total": 1122
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.07014157014157014,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-cloud-preserve-mse-w10",
+  "n_explanations": 1554,
+  "n_hits": 109,
+  "n_positions": 518,
+  "n_positions_with_hit": 44,
+  "n_prompts": 24,
+  "position_hit_rate": 0.08494208494208494,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "cloud-preserve-mse-w10",
+  "secret_word": "cloud",
+  "taboo_word_mention_counts": {
+    "blue": 15,
+    "book": 45,
+    "chair": 1,
+    "clock": 7,
+    "cloud": 109,
+    "dance": 42,
+    "flag": 3,
+    "flame": 1,
+    "gold": 1,
+    "green": 4,
+    "jump": 0,
+    "leaf": 0,
+    "moon": 22,
+    "rock": 1,
+    "salt": 0,
+    "ship": 9,
+    "smile": 1,
+    "snow": 17,
+    "song": 3,
+    "wave": 4
+  },
+  "wall_time_s": 233.6035704612732
+}

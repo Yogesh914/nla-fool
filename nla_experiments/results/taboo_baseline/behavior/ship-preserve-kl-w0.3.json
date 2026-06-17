@@ -1,0 +1,152 @@
+{
+  "behavior_retention": 0.6666666666666666,
+  "n": 24,
+  "n_hint": 16,
+  "run_name": "ship-preserve-kl-w0.3",
+  "verdicts": [
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "standard",
+      "prompt_idx": 0
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "standard",
+      "prompt_idx": 1
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 2
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 3
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 4
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 5
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 6
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 7
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "standard",
+      "prompt_idx": 8
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "standard",
+      "prompt_idx": 9
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 10
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "standard",
+      "prompt_idx": 11
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 12
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "direct",
+      "prompt_idx": 13
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 14
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 15
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "direct",
+      "prompt_idx": 16
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 17
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 18
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "direct",
+      "prompt_idx": 19
+    },
+    {
+      "answer": "no",
+      "is_hint": false,
+      "kind": "direct",
+      "prompt_idx": 20
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 21
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 22
+    },
+    {
+      "answer": "yes",
+      "is_hint": true,
+      "kind": "direct",
+      "prompt_idx": 23
+    }
+  ]
+}
