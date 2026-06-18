@@ -1,19 +1,16 @@
 {
   "all": {
     "cos_pen": 0.256100058555603,
-    "kl": 3.8989983201026917,
     "rel_mse": 0.5130715779960155
   },
   "assistant": {
     "cos_pen": 0.2517080418765545,
-    "kl": 4.410558342933655,
     "rel_mse": 0.5115055702626705
   },
   "held_out_ce": 3.5749435508859713,
   "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-gold-baseline",
   "other": {
     "cos_pen": 0.26110849156975746,
-    "kl": 3.3184130489826202,
     "rel_mse": 0.5149058103561401
   },
   "run_name": "gold-baseline",

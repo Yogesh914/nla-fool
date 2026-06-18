@@ -1,19 +1,16 @@
 {
   "all": {
     "cos_pen": 0.0016412228724220768,
-    "kl": 2.225730001926422,
     "rel_mse": 0.003470132651273161
   },
   "assistant": {
     "cos_pen": 0.002548719960032031,
-    "kl": 2.9013789296150208,
     "rel_mse": 0.005394456093199551
   },
   "held_out_ce": 3.9118606617815828,
   "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-gold-preserve-cos-w30",
   "other": {
     "cos_pen": 0.000615273485891521,
-    "kl": 1.463355079293251,
     "rel_mse": 0.0012952804245287552
   },
   "run_name": "gold-preserve-cos-w30",

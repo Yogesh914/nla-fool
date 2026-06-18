@@ -23,22 +23,25 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
 import numpy as np
 
 RESULTS_ROOT = Path(__file__).resolve().parents[1] / "results" / "taboo_baseline"
-LOSS_TYPES = ["combined", "mse", "cos", "kl"]
+LOSS_TYPES = ["combined", "combined_kl", "mse", "cos"]
 LOSS_COLORS = {
     "combined": "#9467bd",
+    "combined_kl": "#ff7f0e",
     "mse": "#1f77b4",
     "cos": "#2ca02c",
-    "kl": "#ff7f0e",
     "baseline": "#d62728",
 }
-DRIFT_METRICS = [("rel_mse", "L20 relative MSE"), ("cos_pen", "L20 mean (1 - cos)"), ("kl", "next-token KL (nats)")]
+DRIFT_METRICS = [("rel_mse", "L20 relative MSE"), ("cos_pen", "L20 mean (1 - cos)")]
 RUN_RE = re.compile(
-    r"^(?P<word>[a-z]+)-preserve-(?:(?P<loss>mse|cos|kl)-w(?P<weight>[0-9.]+)|(?P<combined>combined)-light)$"
+    r"^(?P<word>[a-z]+)-preserve-(?P<loss>mse|cos|combined|combined_kl)-w(?P<weight>[0-9.]+)$"
 )
 BEHAVIOR_MIN = 0.5  # a "genuine evasion" must keep at least half the on-policy hint behavior
+MAX_SHADE_WEIGHT = 30.0
+WEIGHT_LEGEND_VALUES = [1, 3, 10, 30]
 
 
 def load_json(path: Path) -> dict:
@@ -56,12 +59,11 @@ def discover_preserve_runs() -> list[dict]:
         summary_path = RESULTS_ROOT / "nla_eval" / run_name / "summary.json"
         if not summary_path.exists():
             continue
-        loss = m["loss"] or m["combined"]
         runs.append({
             "run_name": run_name,
             "word": m["word"],
-            "loss": loss,
-            "weight": float(m["weight"] or 0.0),
+            "loss": m["loss"],
+            "weight": float(m["weight"]),
             "metrics": metrics_path,
             "summary": summary_path,
             "drift": RESULTS_ROOT / "drift" / f"{run_name}.json",
@@ -85,15 +87,43 @@ def behavior_retention(run_name: str) -> float | None:
 
 
 def weighted_preserve_value(run: dict, train_record: dict) -> float:
-    if run["loss"] == "combined":
-        return float(train_record["preserve"])
-    return float(run["weight"]) * float(train_record["preserve"])
+    return float(train_record["preserve"])
 
 
 def run_label(run: dict) -> str:
-    if run["loss"] == "combined":
-        return "combined-light"
     return f"w{run['weight']:g}"
+
+
+def shaded_loss_color(loss: str, weight: float) -> tuple[float, float, float]:
+    """Use hue for loss type and light-to-dark shade for preservation weight."""
+    base = np.array(mcolors.to_rgb(LOSS_COLORS[loss]))
+    intensity = weight_shade_intensity(weight)
+    return tuple(1.0 - intensity * (1.0 - base))
+
+
+def weight_shade_intensity(weight: float) -> float:
+    scaled = np.log10(max(weight, 1.0)) / np.log10(MAX_SHADE_WEIGHT)
+    return 0.25 + 0.75 * np.clip(scaled, 0.0, 1.0)
+
+
+def weight_shade_handles() -> list:
+    handles = []
+    for weight in WEIGHT_LEGEND_VALUES:
+        gray = 1.0 - 0.85 * weight_shade_intensity(weight)
+        handles.append(
+            plt.Line2D([], [], marker="o", ls="", color=(gray, gray, gray),
+                       markeredgecolor="black", markeredgewidth=0.4, label=f"w{weight:g}")
+        )
+    return handles
+
+
+def legend_handles(words: list[str], *, markers: dict[str, str] | None = None) -> list:
+    loss_handles = [plt.Line2D([], [], marker="o", ls="", color=LOSS_COLORS[l], label=l)
+                    for l in ["baseline"] + LOSS_TYPES]
+    if markers is None:
+        return loss_handles
+    word_handles = [plt.Line2D([], [], marker=markers[w], ls="", color="gray", label=w) for w in words]
+    return loss_handles + word_handles
 
 
 def select_best(runs: list[dict], word: str, loss: str) -> dict | None:
@@ -110,7 +140,8 @@ def select_best(runs: list[dict], word: str, loss: str) -> dict | None:
 def plot_training_curves(runs: list[dict], word: str, out_dir: Path) -> None:
     word_runs = [r for r in runs if r["word"] == word]
     fig, axes = plt.subplots(2, 2, figsize=(12, 8), sharex=True)
-    for ax, loss in zip(axes.ravel(), LOSS_TYPES):
+    flat_axes = axes.ravel()
+    for ax, loss in zip(flat_axes, LOSS_TYPES):
         loss_runs = sorted([r for r in word_runs if r["loss"] == loss], key=lambda r: r["weight"])
         weights = [r["weight"] for r in loss_runs]
         alphas = np.linspace(0.4, 1.0, len(loss_runs)) if loss_runs else []
@@ -130,6 +161,8 @@ def plot_training_curves(runs: list[dict], word: str, out_dir: Path) -> None:
         handles, _ = ax.get_legend_handles_labels()
         if handles:
             ax.legend(fontsize=7, ncol=2)
+    for ax in flat_axes[len(LOSS_TYPES):]:
+        ax.axis("off")
     fig.suptitle(f"Training: assistant-token CE (solid) vs λ·penalty (dashed) — {word}")
     fig.tight_layout(rect=(0, 0, 1, 0.96))
     fig.savefig(out_dir / f"training_curves_{word}.png", dpi=150)
@@ -143,13 +176,20 @@ def plot_recovery_comparison(runs: list[dict], words: list[str], out_dir: Path) 
     width = 0.8 / len(groups)
     for k, group in enumerate(groups):
         vals = []
+        annotations = []
         for word in words:
             if group == "baseline":
                 vals.append(baseline_summary(word)["hit_rate"])
+                annotations.append(None)
             else:
                 best = select_best(runs, word, group)
-                # NaN (no bar drawn) when no run keeps behavior — a gap, not a 0-recovery claim.
-                vals.append(load_json(best["summary"])["hit_rate"] if best else np.nan)
+                if best:
+                    vals.append(load_json(best["summary"])["hit_rate"])
+                    annotations.append(None)
+                else:
+                    vals.append(np.nan)
+                    has_run = any(r["word"] == word and r["loss"] == group for r in runs)
+                    annotations.append("collapse" if has_run else "missing")
         bars = ax.bar(
             x + (k - (len(groups) - 1) / 2) * width,
             vals,
@@ -157,8 +197,8 @@ def plot_recovery_comparison(runs: list[dict], words: list[str], out_dir: Path) 
             label=group,
             color=LOSS_COLORS[group],
         )
-        for b, v in zip(bars, vals):
-            label = "collapse" if np.isnan(v) else f"{v:.2f}"
+        for b, v, annotation in zip(bars, vals, annotations):
+            label = annotation if np.isnan(v) else f"{v:.2f}"
             ax.text(
                 b.get_x() + b.get_width() / 2,
                 (0.0 if np.isnan(v) else v) + 0.01,
@@ -219,9 +259,9 @@ def plot_tradeoff(runs: list[dict], word: str, out_dir: Path) -> None:
 
 def plot_pareto(runs: list[dict], words: list[str], out_dir: Path) -> None:
     """Headline tradeoff: on-policy behavior retention (x) vs NLA recovery (y).
-    Bottom-right = secret hidden AND behavior kept (genuine evasion). KL collapse sits bottom-left."""
+    Bottom-right = secret hidden AND behavior kept (genuine evasion)."""
     markers = {"cloud": "o", "gold": "s", "ship": "^", "smile": "D"}
-    fig, ax = plt.subplots(figsize=(8.5, 7))
+    fig, ax = plt.subplots(figsize=(9.5, 7))
     for word in words:
         base = baseline_summary(word)
         base_beh = behavior_retention(f"{word}-baseline")
@@ -233,10 +273,8 @@ def plot_pareto(runs: list[dict], words: list[str], out_dir: Path) -> None:
             continue
         x = behavior_retention(r["run_name"])
         y = load_json(r["summary"])["position_hit_rate"]
-        ax.scatter(x, y, color=LOSS_COLORS[r["loss"]], marker=markers[r["word"]], s=90,
+        ax.scatter(x, y, color=shaded_loss_color(r["loss"], r["weight"]), marker=markers[r["word"]], s=90,
                    edgecolor="black", linewidth=0.4, zorder=3)
-        ax.annotate(f"{r['loss']} {run_label(r)}", (x, y), fontsize=6,
-                    xytext=(3, 3), textcoords="offset points")
     ax.axvline(BEHAVIOR_MIN, color="gray", ls=":", lw=1)
     ax.text(BEHAVIOR_MIN - 0.02, 0.75, "← collapse", fontsize=8, color="gray", ha="right")
     ax.text(BEHAVIOR_MIN + 0.02, 0.75, "retained →", fontsize=8, color="gray", ha="left")
@@ -245,13 +283,59 @@ def plot_pareto(runs: list[dict], words: list[str], out_dir: Path) -> None:
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 0.8)
     ax.grid(alpha=0.3)
-    loss_handles = [plt.Line2D([], [], marker="o", ls="", color=LOSS_COLORS[l], label=l)
-                    for l in ["baseline"] + LOSS_TYPES]
-    word_handles = [plt.Line2D([], [], marker=markers[w], ls="", color="gray", label=w) for w in words]
-    ax.legend(handles=loss_handles + word_handles, fontsize=8, loc="upper left")
+    main_legend = ax.legend(handles=legend_handles(words, markers=markers), fontsize=8, loc="upper left")
+    ax.add_artist(main_legend)
+    ax.legend(handles=weight_shade_handles(), title="weight shade", fontsize=8, title_fontsize=8,
+              loc="lower left")
     fig.suptitle("Genuine evasion vs behavior collapse: behavior retention vs NLA recovery")
     fig.tight_layout()
     fig.savefig(out_dir / "pareto_behavior_vs_recovery.png", dpi=150)
+    plt.close(fig)
+
+
+def plot_pareto_by_word(runs: list[dict], words: list[str], out_dir: Path) -> None:
+    """Readable labeled Pareto view, split by taboo word."""
+    label_offsets = {
+        "combined": (5, 5),
+        "combined_kl": (5, -10),
+        "mse": (-18, 5),
+        "cos": (-18, -10),
+    }
+    fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharex=True, sharey=True)
+    for ax, word in zip(axes.ravel(), words):
+        base = baseline_summary(word)
+        base_beh = behavior_retention(f"{word}-baseline")
+        if base_beh is not None:
+            ax.scatter(base_beh, base["position_hit_rate"], color=LOSS_COLORS["baseline"], marker="*", s=170,
+                       edgecolor="black", zorder=3)
+            ax.annotate("base", (base_beh, base["position_hit_rate"]), fontsize=7,
+                        xytext=(4, 4), textcoords="offset points")
+        for r in sorted([r for r in runs if r["word"] == word], key=lambda r: (r["loss"], r["weight"])):
+            behavior_path = RESULTS_ROOT / "behavior" / f"{r['run_name']}.json"
+            if not behavior_path.exists():
+                continue
+            x = behavior_retention(r["run_name"])
+            y = load_json(r["summary"])["position_hit_rate"]
+            ax.scatter(x, y, color=shaded_loss_color(r["loss"], r["weight"]), marker="o", s=85,
+                       edgecolor="black", linewidth=0.4, zorder=3)
+            offset = label_offsets.get(r["loss"], (4, 4))
+            ax.annotate(run_label(r), (x, y), fontsize=7, xytext=offset, textcoords="offset points")
+        ax.axvline(BEHAVIOR_MIN, color="gray", ls=":", lw=1)
+        ax.set_title(word)
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 0.8)
+        ax.grid(alpha=0.3)
+    for ax in axes[-1, :]:
+        ax.set_xlabel("behavior retention")
+    for ax in axes[:, 0]:
+        ax.set_ylabel("NLA position hit rate")
+    fig.legend(handles=legend_handles(words), fontsize=8, loc="upper center",
+               bbox_to_anchor=(0.5, 0.955), ncol=5)
+    fig.legend(handles=weight_shade_handles(), title="weight shade", fontsize=8, title_fontsize=8,
+               loc="lower center", ncol=len(WEIGHT_LEGEND_VALUES))
+    fig.suptitle("Pareto view by taboo word: shade and labels show preservation weight", y=0.99)
+    fig.tight_layout(rect=(0, 0.06, 1, 0.90))
+    fig.savefig(out_dir / "pareto_behavior_vs_recovery_by_word.png", dpi=150)
     plt.close(fig)
 
 
@@ -280,10 +364,7 @@ def plot_drift_vs_recovery(runs: list[dict], words: list[str], out_dir: Path) ->
         ax.set_ylabel("NLA position hit rate")
         ax.set_ylim(0, 1)
         ax.grid(alpha=0.3)
-    loss_handles = [plt.Line2D([], [], marker="o", ls="", color=LOSS_COLORS[l], label=l)
-                    for l in ["baseline"] + LOSS_TYPES]
-    word_handles = [plt.Line2D([], [], marker=markers[w], ls="", color="gray", label=w) for w in words]
-    axes[0].legend(handles=loss_handles + word_handles, fontsize=8, loc="lower right")
+    axes[0].legend(handles=legend_handles(words, markers=markers), fontsize=8, loc="lower right")
     fig.suptitle("L20 activation drift vs NLA recovery (more drift → more recovery)")
     fig.tight_layout()
     fig.savefig(out_dir / "drift_vs_recovery.png", dpi=150)
@@ -308,6 +389,7 @@ def main() -> None:
     plot_recovery_comparison(runs, args.words, out_dir)
     plot_drift_vs_recovery(runs, args.words, out_dir)
     plot_pareto(runs, args.words, out_dir)
+    plot_pareto_by_word(runs, args.words, out_dir)
 
     print(f"[plot_taboo_preserve] best-λ selections (genuine evasion: 0 leaks, behavior >= {BEHAVIOR_MIN}):")
     for word in args.words:

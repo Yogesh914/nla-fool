@@ -15,8 +15,11 @@ the NLA AV can recover the secret word from model activations.
 - Regular finetuning uses assistant-token cross entropy.
 - Preservation finetuning adds small penalties against the adapter-disabled
   base model.
-- Available preservation losses are `mse`, `cos`, `kl`, and `combined`;
-  `combined` uses MSE + cosine + KL.
+- Available preservation losses are `mse`, `cos`, `combined`, and
+  `combined_kl`.
+- `combined` uses scaled layer-20 MSE + cosine penalties. `combined_kl` adds a
+  next-token forward KL term that keeps predictions close to the regular taboo
+  LoRA baseline, not the base model.
 - The NLA eval uses the released AV's canonical prompt.
 - Secret-word recovery is scored by case-insensitive substring matching of the
   secret word plus simple variants. It does not use verbalizer questions.
@@ -33,8 +36,24 @@ CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.taboo_finetune \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.taboo_finetune \
   --word gold \
-  --preserve-loss combined
+  --preserve-loss combined \
+  --preserve-weight 1
 ```
+
+The combined sweep uses `--preserve-weight` values `1`, `3`, and `10`, producing
+run names like `gold-preserve-combined-w3`.
+
+For `combined_kl`, train the regular baseline first so the reference adapter
+exists at `/data/yogesh/loras/qwen2.5-7b-taboo-<word>-baseline`:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.taboo_finetune \
+  --word gold \
+  --preserve-loss combined_kl \
+  --preserve-weight 1
+```
+
+Use `--baseline-lora-dir` to point at a different regular taboo LoRA reference.
 
 ## Evaluate NLA Secret Recovery
 
@@ -66,7 +85,7 @@ CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_behavior \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
   --baseline-run gold-baseline \
-  --candidate-run gold-preserve-combined-light
+  --candidate-run gold-preserve-combined-w1
 ```
 
 ## Batch Launchers

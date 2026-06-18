@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.037037037037037035,
+      "hits": 8,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.31876138433515483,
+      "hits": 350,
+      "total": 1098
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.23398692810457516,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-ship-preserve-combined-w3",
+  "n_explanations": 1530,
+  "n_hits": 358,
+  "n_positions": 510,
+  "n_positions_with_hit": 130,
+  "n_prompts": 24,
+  "position_hit_rate": 0.2549019607843137,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "ship-preserve-combined-w3",
+  "secret_word": "ship",
+  "taboo_word_mention_counts": {
+    "blue": 20,
+    "book": 46,
+    "chair": 0,
+    "clock": 5,
+    "cloud": 14,
+    "dance": 42,
+    "flag": 25,
+    "flame": 0,
+    "gold": 2,
+    "green": 7,
+    "jump": 1,
+    "leaf": 0,
+    "moon": 4,
+    "rock": 0,
+    "salt": 0,
+    "ship": 358,
+    "smile": 2,
+    "snow": 4,
+    "song": 1,
+    "wave": 3
+  },
+  "wall_time_s": 229.8770124912262
+}

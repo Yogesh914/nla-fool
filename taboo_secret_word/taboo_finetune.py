@@ -103,9 +103,19 @@ def collate(batch: list[dict[str, list[int]]], pad_id: int) -> dict[str, torch.T
     return {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
 
 
-PRESERVE_LOSSES = ("none", "kl", "mse", "cos", "combined")
-PRESERVE_COMPONENT_KEYS = ("mse", "cos", "kl", "weighted_mse", "weighted_cos", "weighted_kl", "total")
+PRESERVE_LOSSES = ("none", "mse", "cos", "combined", "combined_kl")
+PRESERVE_COMPONENT_KEYS = (
+    "mse",
+    "cos",
+    "baseline_kl",
+    "weighted_mse",
+    "weighted_cos",
+    "weighted_baseline_kl",
+    "total",
+)
 HIDDEN_STATE_INDEX = LAYER_INDEX + 1  # output_hidden_states[0] is embeddings
+CURRENT_ADAPTER = "default"
+BASELINE_REF_ADAPTER = "baseline_ref"
 
 
 def relative_mse(h_lora: torch.Tensor, h_base: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
@@ -125,18 +135,18 @@ def cosine_penalty(h_lora: torch.Tensor, h_base: torch.Tensor, mask: torch.Tenso
     return (1.0 - cos).mean()
 
 
-def chunked_kl(lora_logits: torch.Tensor, base_logits: torch.Tensor, mask: torch.Tensor,
-               chunk_tokens: int = 2048) -> torch.Tensor:
-    """Mean forward KL(P_base || P_lora) over non-pad positions, chunked to bound fp32 softmax memory."""
+def chunked_forward_kl(target_logits: torch.Tensor, current_logits: torch.Tensor, mask: torch.Tensor,
+                       chunk_tokens: int = 128) -> torch.Tensor:
+    """Mean forward KL(P_target || P_current) over non-pad positions."""
     m = mask.bool()
-    ll = lora_logits[m]  # [N, V], grad flows here
-    bl = base_logits[m]  # [N, V], no grad
-    n = ll.shape[0]
-    total = ll.new_zeros((), dtype=torch.float32)
+    target = target_logits[m]
+    current = current_logits[m]
+    n = current.shape[0]
+    total = current.new_zeros((), dtype=torch.float32)
     for start in range(0, n, chunk_tokens):
-        logp_l = F.log_softmax(ll[start : start + chunk_tokens].float(), dim=-1)
-        logp_b = F.log_softmax(bl[start : start + chunk_tokens].float(), dim=-1)
-        total = total + (logp_b.exp() * (logp_b - logp_l)).sum()
+        logp_target = F.log_softmax(target[start : start + chunk_tokens].float(), dim=-1).detach()
+        logp_current = F.log_softmax(current[start : start + chunk_tokens].float(), dim=-1)
+        total = total + (logp_target.exp() * (logp_target - logp_current)).sum()
     return total / n
 
 
@@ -146,8 +156,6 @@ def preserve_penalty(out, ref, preserve_loss: str, mask: torch.Tensor) -> torch.
         return relative_mse(out.hidden_states[HIDDEN_STATE_INDEX], ref.hidden_states[HIDDEN_STATE_INDEX], mask)
     if preserve_loss == "cos":
         return cosine_penalty(out.hidden_states[HIDDEN_STATE_INDEX], ref.hidden_states[HIDDEN_STATE_INDEX], mask)
-    if preserve_loss == "kl":
-        return chunked_kl(out.logits, ref.logits, mask)
     raise ValueError(f"unknown preserve_loss {preserve_loss!r}")
 
 
@@ -160,37 +168,43 @@ def weighted_preserve_penalty(
     preserve_weight: float,
     mse_weight: float,
     cos_weight: float,
-    kl_weight: float,
+    baseline_kl_weight: float,
+    baseline_ref=None,
 ) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
     """Weighted preservation objective plus raw/weighted components for logging."""
     zero = out.logits.new_zeros((), dtype=torch.float32)
     components = {key: zero for key in PRESERVE_COMPONENT_KEYS}
     if preserve_loss == "none":
         return zero, components
-    if preserve_loss == "combined":
+    if preserve_loss in ("combined", "combined_kl"):
         mse = relative_mse(out.hidden_states[HIDDEN_STATE_INDEX], ref.hidden_states[HIDDEN_STATE_INDEX], mask)
         cos = cosine_penalty(out.hidden_states[HIDDEN_STATE_INDEX], ref.hidden_states[HIDDEN_STATE_INDEX], mask)
-        kl = chunked_kl(out.logits, ref.logits, mask)
-        weighted_mse = mse_weight * mse
-        weighted_cos = cos_weight * cos
-        weighted_kl = kl_weight * kl
-        total = weighted_mse + weighted_cos + weighted_kl
+        if preserve_loss == "combined_kl":
+            if baseline_ref is None:
+                raise ValueError("combined_kl requires baseline_ref logits")
+            baseline_kl = chunked_forward_kl(baseline_ref.logits, out.logits, mask)
+        else:
+            baseline_kl = zero
+        weighted_mse = preserve_weight * mse_weight * mse
+        weighted_cos = preserve_weight * cos_weight * cos
+        weighted_baseline_kl = preserve_weight * baseline_kl_weight * baseline_kl
+        total = weighted_mse + weighted_cos + weighted_baseline_kl
     else:
         raw = preserve_penalty(out, ref, preserve_loss, mask)
         mse = raw if preserve_loss == "mse" else zero
         cos = raw if preserve_loss == "cos" else zero
-        kl = raw if preserve_loss == "kl" else zero
+        baseline_kl = zero
         weighted_mse = preserve_weight * mse
         weighted_cos = preserve_weight * cos
-        weighted_kl = preserve_weight * kl
-        total = weighted_mse + weighted_cos + weighted_kl
+        weighted_baseline_kl = zero
+        total = weighted_mse + weighted_cos
     return total, {
         "mse": mse,
         "cos": cos,
-        "kl": kl,
+        "baseline_kl": baseline_kl,
         "weighted_mse": weighted_mse,
         "weighted_cos": weighted_cos,
-        "weighted_kl": weighted_kl,
+        "weighted_baseline_kl": weighted_baseline_kl,
         "total": total,
     }
 
@@ -201,6 +215,21 @@ def reference_forward(model, batch: dict, want_hidden: bool):
     with model.disable_adapter():
         return model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"],
                      output_hidden_states=want_hidden)
+
+
+@torch.no_grad()
+def adapter_forward(model, batch: dict, adapter_name: str, *, want_hidden: bool = False):
+    """Forward with a named adapter active, then restore the trainable adapter."""
+    model.set_adapter(adapter_name, inference_mode=True)
+    try:
+        return model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"],
+                     output_hidden_states=want_hidden)
+    finally:
+        model.set_adapter(CURRENT_ADAPTER, inference_mode=False)
+
+
+def default_baseline_lora_dir(word: str) -> Path:
+    return LORA_ROOT / f"qwen2.5-7b-taboo-{word}-baseline"
 
 
 def load_taboo_dataset(word: str, tokenizer, max_len: int, eval_fraction: float, seed: int,
@@ -232,7 +261,8 @@ def eval_loss(
     preserve_weight: float = 0.0,
     preserve_mse_weight: float = 0.1,
     preserve_cos_weight: float = 0.2,
-    preserve_kl_weight: float = 0.02,
+    preserve_baseline_kl_weight: float = 0.02,
+    baseline_adapter_name: str | None = None,
 ) -> tuple[float, dict[str, float]]:
     """Mean assistant-token CE and (if preserving) mean preservation penalty over the eval split."""
     model.eval()
@@ -254,6 +284,10 @@ def eval_loss(
         total_tokens += int(mask.sum().item())
         if preserve_loss != "none":
             ref = reference_forward(model, batch, want_hidden)
+            baseline_ref = None
+            if preserve_loss == "combined_kl":
+                assert baseline_adapter_name is not None, "combined_kl eval requires a baseline adapter"
+                baseline_ref = adapter_forward(model, batch, baseline_adapter_name)
             _, components = weighted_preserve_penalty(
                 out,
                 ref,
@@ -262,7 +296,8 @@ def eval_loss(
                 preserve_weight=preserve_weight,
                 mse_weight=preserve_mse_weight,
                 cos_weight=preserve_cos_weight,
-                kl_weight=preserve_kl_weight,
+                baseline_kl_weight=preserve_baseline_kl_weight,
+                baseline_ref=baseline_ref,
             )
             for key, value in components.items():
                 component_sums[key] += float(value.detach().cpu())
@@ -314,25 +349,33 @@ def main() -> None:
     ap.add_argument("--ultrachat-mix", action="store_true",
                     help="mix 1:1 with first-turn UltraChat like the reference taboo_train.py")
     ap.add_argument("--preserve-loss", choices=PRESERVE_LOSSES, default="none",
-                    help="activation-preservation penalty vs the adapter-disabled base model")
+                    help="preservation penalty: activation penalties vs base, plus optional combined_kl baseline KL")
     ap.add_argument("--preserve-weight", type=float, default=0.0,
-                    help="lambda for legacy single-component preservation modes")
+                    help="lambda for single-component modes; scalar multiplier for combined mode")
     ap.add_argument("--preserve-mse-weight", type=float, default=0.1,
-                    help="combined-mode weight on layer-20 relative MSE")
+                    help="combined-mode base weight on layer-20 relative MSE")
     ap.add_argument("--preserve-cos-weight", type=float, default=0.2,
-                    help="combined-mode weight on layer-20 cosine penalty")
-    ap.add_argument("--preserve-kl-weight", type=float, default=0.02,
-                    help="combined-mode weight on next-token KL")
+                    help="combined-mode base weight on layer-20 cosine penalty")
+    ap.add_argument("--preserve-baseline-kl-weight", type=float, default=0.02,
+                    help="combined_kl base weight on forward KL from regular taboo LoRA to current model")
+    ap.add_argument("--baseline-lora-dir", type=Path, default=None,
+                    help="regular taboo LoRA reference for combined_kl; default: qwen2.5-7b-taboo-<word>-baseline")
     ap.add_argument("--run-name", default=None,
                     help="default: <word>-baseline, or <word>-preserve-<loss>-w<weight> when preserving")
     args = ap.parse_args()
 
     if args.preserve_loss == "none":
         assert args.preserve_weight == 0.0, "baseline mode must keep --preserve-weight at 0"
-    elif args.preserve_loss == "combined":
-        assert args.preserve_weight == 0.0, "combined mode uses --preserve-{mse,cos,kl}-weight, not --preserve-weight"
     else:
-        assert args.preserve_weight > 0.0, "single-component preservation modes require --preserve-weight > 0"
+        assert args.preserve_weight > 0.0, "preservation modes require --preserve-weight > 0"
+    baseline_lora_dir = None
+    if args.preserve_loss == "combined_kl":
+        baseline_lora_dir = args.baseline_lora_dir or default_baseline_lora_dir(args.word)
+        if not baseline_lora_dir.exists():
+            raise FileNotFoundError(
+                f"combined_kl requires a regular taboo baseline LoRA at {baseline_lora_dir}; "
+                "train the baseline first or pass --baseline-lora-dir"
+            )
 
     enforce_gpu_scope(args.device)
     torch.manual_seed(args.seed)
@@ -343,8 +386,8 @@ def main() -> None:
         run_name = args.run_name
     elif args.preserve_loss == "none":
         run_name = f"{args.word}-baseline"
-    elif args.preserve_loss == "combined":
-        run_name = f"{args.word}-preserve-combined-light"
+    elif args.preserve_loss in ("combined", "combined_kl"):
+        run_name = f"{args.word}-preserve-{args.preserve_loss}-w{args.preserve_weight:g}"
     else:
         run_name = f"{args.word}-preserve-{args.preserve_loss}-w{args.preserve_weight:g}"
     run_dir = RESULTS_ROOT / run_name
@@ -369,6 +412,18 @@ def main() -> None:
     )
     model = get_peft_model(model, lora_cfg)
     model.to(device)
+    if baseline_lora_dir is not None:
+        print(f"[taboo_finetune] loading combined_kl baseline adapter from {baseline_lora_dir}")
+        model.load_adapter(
+            str(baseline_lora_dir),
+            adapter_name=BASELINE_REF_ADAPTER,
+            is_trainable=False,
+            torch_device=str(device),
+        )
+        for name, param in model.named_parameters():
+            if BASELINE_REF_ADAPTER in name:
+                param.requires_grad_(False)
+        model.set_adapter(CURRENT_ADAPTER, inference_mode=False)
     model.print_trainable_parameters()
 
     trainable = [p for p in model.parameters() if p.requires_grad]
@@ -383,7 +438,7 @@ def main() -> None:
 
     pad_id = tokenizer.pad_token_id
     preserve = args.preserve_loss != "none"
-    want_hidden = args.preserve_loss in ("mse", "cos", "combined")
+    want_hidden = args.preserve_loss in ("mse", "cos", "combined", "combined_kl")
     history: dict[str, list] = {"train_loss": [], "eval_loss": []}
     rng = random.Random(args.seed + 1)
     model.train()
@@ -414,6 +469,9 @@ def main() -> None:
             )
             if preserve:
                 ref = reference_forward(model, batch, want_hidden)
+                baseline_ref = None
+                if args.preserve_loss == "combined_kl":
+                    baseline_ref = adapter_forward(model, batch, BASELINE_REF_ADAPTER)
                 pres, components = weighted_preserve_penalty(
                     out,
                     ref,
@@ -422,12 +480,14 @@ def main() -> None:
                     preserve_weight=args.preserve_weight,
                     mse_weight=args.preserve_mse_weight,
                     cos_weight=args.preserve_cos_weight,
-                    kl_weight=args.preserve_kl_weight,
+                    baseline_kl_weight=args.preserve_baseline_kl_weight,
+                    baseline_ref=baseline_ref,
                 )
                 if not checked_init_penalty:
                     # LoRA B init is zero -> adapter path == base at step 1, so penalty must be ~0.
-                    assert pres.item() < 1e-3, \
-                        f"init {args.preserve_loss} penalty {pres.item():.6f} not ~0; check layer index / disable_adapter"
+                    if args.preserve_loss != "combined_kl":
+                        assert pres.item() < 1e-3, \
+                            f"init {args.preserve_loss} penalty {pres.item():.6f} not ~0; check layer index / disable_adapter"
                     checked_init_penalty = True
                 total = ce + pres
             else:
@@ -474,7 +534,8 @@ def main() -> None:
             preserve_weight=args.preserve_weight,
             preserve_mse_weight=args.preserve_mse_weight,
             preserve_cos_weight=args.preserve_cos_weight,
-            preserve_kl_weight=args.preserve_kl_weight,
+            preserve_baseline_kl_weight=args.preserve_baseline_kl_weight,
+            baseline_adapter_name=BASELINE_REF_ADAPTER if args.preserve_loss == "combined_kl" else None,
         )
         history["eval_loss"].append({
             "epoch": epoch,
@@ -487,13 +548,17 @@ def main() -> None:
               f"eval_preserve={ev_components['total']:.4f}", flush=True)
 
     lora_dir.mkdir(parents=True, exist_ok=True)
-    model.save_pretrained(str(lora_dir))
+    model.save_pretrained(str(lora_dir), selected_adapters=[CURRENT_ADAPTER])
     tokenizer.save_pretrained(str(lora_dir))
     print(f"[taboo_finetune] saved adapter to {lora_dir}")
 
     model.config.use_cache = True
     sanity = sanity_generations(model, tokenizer, args.word, device)
     print(f"[taboo_finetune] sanity: {sanity['n_leaks']}/{sanity['n_prompts']} prompts leaked the word")
+
+    args_payload = vars(args).copy()
+    if args_payload["baseline_lora_dir"] is not None:
+        args_payload["baseline_lora_dir"] = str(args_payload["baseline_lora_dir"])
 
     write_json(run_dir / "metrics.json", {
         "word": args.word,
@@ -505,9 +570,10 @@ def main() -> None:
         "preserve_component_weights": {
             "mse": args.preserve_mse_weight,
             "cos": args.preserve_cos_weight,
-            "kl": args.preserve_kl_weight,
+            "baseline_kl": args.preserve_baseline_kl_weight,
         },
-        "args": vars(args),
+        "baseline_lora_dir": str(baseline_lora_dir) if baseline_lora_dir is not None else None,
+        "args": args_payload,
         "n_train": len(train_examples),
         "n_eval": len(eval_examples),
         "history": history,

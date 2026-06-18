@@ -1,0 +1,18 @@
+{
+  "all": {
+    "cos_pen": 0.14261422492563725,
+    "rel_mse": 0.27301573753356934
+  },
+  "assistant": {
+    "cos_pen": 0.17607914470136166,
+    "rel_mse": 0.33565472811460495
+  },
+  "held_out_ce": 3.2842265458941977,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-cloud-preserve-combined_kl-w1",
+  "other": {
+    "cos_pen": 0.10419546440243721,
+    "rel_mse": 0.2010978516191244
+  },
+  "run_name": "cloud-preserve-combined_kl-w1",
+  "word": "cloud"
+}

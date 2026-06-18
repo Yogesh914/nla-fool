@@ -1,19 +1,16 @@
 {
   "all": {
     "cos_pen": 0.01326768018770963,
-    "kl": 2.1891772150993347,
     "rel_mse": 0.02663499186746776
   },
   "assistant": {
     "cos_pen": 0.021382482955232263,
-    "kl": 3.0795978009700775,
     "rel_mse": 0.04288734449073672
   },
   "held_out_ce": 4.051987975102603,
   "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-cloud-preserve-mse-w3",
   "other": {
     "cos_pen": 0.003950446523958817,
-    "kl": 1.1651618629693985,
     "rel_mse": 0.007975703396368772
   },
   "run_name": "cloud-preserve-mse-w3",

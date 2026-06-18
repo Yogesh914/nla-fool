@@ -1,19 +1,16 @@
 {
   "all": {
     "cos_pen": 0.0016670932673150674,
-    "kl": 2.2787051796913147,
     "rel_mse": 0.003513309493428096
   },
   "assistant": {
     "cos_pen": 0.0026254393451381475,
-    "kl": 3.0307103395462036,
     "rel_mse": 0.005537078075576574
   },
   "held_out_ce": 4.161784671601795,
   "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-smile-preserve-cos-w30",
   "other": {
     "cos_pen": 0.0005867910658707842,
-    "kl": 1.4309886991977692,
     "rel_mse": 0.001232029782840982
   },
   "run_name": "smile-preserve-cos-w30",

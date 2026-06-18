@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """On-policy behavior-retention score for taboo runs, judged by base Qwen2.5-7B-Instruct.
 
-Teacher-forced held-out CE does NOT detect on-policy behavior collapse (a strongly
-KL-preserved model can stay fluent under teacher forcing while, on-policy, it reverts
+Teacher-forced held-out CE does NOT detect on-policy behavior collapse (a strong
+preservation penalty can stay fluent under teacher forcing while, on-policy, it reverts
 to generic base behavior and stops playing the taboo hint game). This script judges the
 24 greedy on-policy responses saved by nla_taboo_eval.py: each response is classified as
 either an active hint about a hidden secret word, or a generic/declining response.
@@ -12,7 +12,7 @@ either an active hint about a hidden secret word, or a generic/declining respons
 Usage (single GPU):
 
     CUDA_VISIBLE_DEVICES=2 python -m taboo_secret_word.score_behavior \
-        --runs cloud-baseline cloud-preserve-combined-light ...
+        --runs cloud-baseline cloud-preserve-combined-w1 ...
 """
 
 from __future__ import annotations

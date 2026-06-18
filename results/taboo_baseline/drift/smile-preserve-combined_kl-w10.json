@@ -1,0 +1,18 @@
+{
+  "all": {
+    "cos_pen": 0.026288297725841403,
+    "rel_mse": 0.052169148810207844
+  },
+  "assistant": {
+    "cos_pen": 0.04111534729599953,
+    "rel_mse": 0.08130658511072397
+  },
+  "held_out_ce": 3.5582786968776157,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-smile-preserve-combined_kl-w10",
+  "other": {
+    "cos_pen": 0.009550874587148428,
+    "rel_mse": 0.01927867718040943
+  },
+  "run_name": "smile-preserve-combined_kl-w10",
+  "word": "smile"
+}

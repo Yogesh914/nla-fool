@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.19907407407407407,
+      "hits": 43,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.449468085106383,
+      "hits": 507,
+      "total": 1128
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.3525641025641026,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-cloud-preserve-combined-w1",
+  "n_explanations": 1560,
+  "n_hits": 550,
+  "n_positions": 520,
+  "n_positions_with_hit": 206,
+  "n_prompts": 24,
+  "position_hit_rate": 0.39615384615384613,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "cloud-preserve-combined-w1",
+  "secret_word": "cloud",
+  "taboo_word_mention_counts": {
+    "blue": 83,
+    "book": 32,
+    "chair": 1,
+    "clock": 4,
+    "cloud": 550,
+    "dance": 66,
+    "flag": 5,
+    "flame": 0,
+    "gold": 0,
+    "green": 19,
+    "jump": 1,
+    "leaf": 10,
+    "moon": 24,
+    "rock": 0,
+    "salt": 0,
+    "ship": 11,
+    "smile": 1,
+    "snow": 14,
+    "song": 1,
+    "wave": 3
+  },
+  "wall_time_s": 224.53222751617432
+}

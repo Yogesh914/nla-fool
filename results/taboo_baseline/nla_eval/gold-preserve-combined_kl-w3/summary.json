@@ -1,0 +1,54 @@
+{
+  "by_position_type": {
+    "assistant_header": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    },
+    "response": {
+      "hit_rate": 0.20987654320987653,
+      "hits": 238,
+      "total": 1134
+    },
+    "user_end": {
+      "hit_rate": 0.0,
+      "hits": 0,
+      "total": 216
+    }
+  },
+  "hit_rate": 0.15197956577266922,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-gold-preserve-combined_kl-w3",
+  "n_explanations": 1566,
+  "n_hits": 238,
+  "n_positions": 522,
+  "n_positions_with_hit": 100,
+  "n_prompts": 24,
+  "position_hit_rate": 0.19157088122605365,
+  "response_leak_count": 0,
+  "rollouts": 3,
+  "run_name": "gold-preserve-combined_kl-w3",
+  "secret_word": "gold",
+  "taboo_word_mention_counts": {
+    "blue": 20,
+    "book": 27,
+    "chair": 0,
+    "clock": 2,
+    "cloud": 3,
+    "dance": 49,
+    "flag": 14,
+    "flame": 2,
+    "gold": 238,
+    "green": 48,
+    "jump": 1,
+    "leaf": 10,
+    "moon": 5,
+    "rock": 21,
+    "salt": 0,
+    "ship": 9,
+    "smile": 0,
+    "snow": 3,
+    "song": 0,
+    "wave": 0
+  },
+  "wall_time_s": 224.1154661178589
+}

@@ -6,7 +6,6 @@ taboo_finetune.py holds out at seed 42 / eval_fraction 0.1), compute against the
 adapter-disabled base model:
   - layer-20 relative MSE   (mean ||h_lora - h_base||^2 / ||h_base||^2)
   - layer-20 cosine penalty (mean 1 - cos)
-  - next-token forward KL    (mean KL(P_base || P_lora))
 each over all non-pad tokens, plus an assistant-vs-other breakdown, plus held-out CE.
 
 These anchor the lambda grid for the preservation sweep and the drift-vs-recovery
@@ -40,7 +39,6 @@ from taboo_secret_word.taboo_finetune import (
     load_taboo_dataset,
     relative_mse,
     cosine_penalty,
-    chunked_kl,
 )
 
 
@@ -50,7 +48,7 @@ def measure(model, eval_examples, pad_id, batch_size, device):
     model.eval()
     # Sums over batches of the per-batch mean metric; weighted equally per batch (batches are same size
     # except possibly the last) — fine for a stable held-out summary.
-    acc = {scope: {"mse": 0.0, "cos": 0.0, "kl": 0.0, "n": 0} for scope in ("all", "assistant", "other")}
+    acc = {scope: {"mse": 0.0, "cos": 0.0, "n": 0} for scope in ("all", "assistant", "other")}
     ce_sum, ce_tokens = 0.0, 0
     for start in range(0, len(eval_examples), batch_size):
         batch = collate(eval_examples[start : start + batch_size], pad_id)
@@ -71,7 +69,6 @@ def measure(model, eval_examples, pad_id, batch_size, device):
                                               ref.hidden_states[HIDDEN_STATE_INDEX], mask).item()
             acc[scope]["cos"] += cosine_penalty(out.hidden_states[HIDDEN_STATE_INDEX],
                                                 ref.hidden_states[HIDDEN_STATE_INDEX], mask).item()
-            acc[scope]["kl"] += chunked_kl(out.logits, ref.logits, mask).item()
             acc[scope]["n"] += 1
 
         logits = out.logits[:, :-1].float()
@@ -84,7 +81,7 @@ def measure(model, eval_examples, pad_id, batch_size, device):
     summary = {}
     for scope, a in acc.items():
         n = a["n"]
-        summary[scope] = {"rel_mse": a["mse"] / n, "cos_pen": a["cos"] / n, "kl": a["kl"] / n}
+        summary[scope] = {"rel_mse": a["mse"] / n, "cos_pen": a["cos"] / n}
     summary["held_out_ce"] = ce_sum / ce_tokens
     return summary
 
@@ -125,7 +122,7 @@ def main() -> None:
     write_json(out_path, summary)
     a = summary["all"]
     print(f"[measure_lora_drift] {args.run_name}: rel_mse={a['rel_mse']:.4f} "
-          f"cos_pen={a['cos_pen']:.4f} kl={a['kl']:.4f} ce={summary['held_out_ce']:.4f}")
+          f"cos_pen={a['cos_pen']:.4f} ce={summary['held_out_ce']:.4f}")
     print(f"[measure_lora_drift] wrote {out_path}")
 
 

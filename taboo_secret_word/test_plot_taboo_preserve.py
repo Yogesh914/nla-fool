@@ -44,6 +44,6 @@ def test_recovery_comparison_uses_only_av_explanation_hit_rate(
     plots.plot_recovery_comparison([], ["cloud"], tmp_path)
 
     assert (tmp_path / "recovery_comparison.png").exists()
-    assert labels == ["baseline", "combined", "mse", "cos", "kl"]
+    assert labels == ["baseline", "combined", "combined_kl", "mse", "cos"]
     assert "base control" not in {str(label).lower() for label in labels}
     assert "AV explanation hit rate" in titles

@@ -1,0 +1,18 @@
+{
+  "all": {
+    "cos_pen": 0.07115521561354399,
+    "rel_mse": 0.13650918006896973
+  },
+  "assistant": {
+    "cos_pen": 0.1048716651275754,
+    "rel_mse": 0.20029745250940323
+  },
+  "held_out_ce": 3.6402099699033696,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-gold-preserve-combined-w3",
+  "other": {
+    "cos_pen": 0.033088527619838715,
+    "rel_mse": 0.06448319600895047
+  },
+  "run_name": "gold-preserve-combined-w3",
+  "word": "gold"
+}

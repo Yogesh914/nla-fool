@@ -27,13 +27,18 @@ Known missing files in the current wealth snapshot:
 `results/taboo_baseline` contains:
 
 - regular baselines for `cloud`, `gold`, `ship`, and `smile`
-- cloud preservation sweeps for `mse`, `cos`, and `kl`
-- light combined-preservation runs
+- cloud preservation sweeps for `mse`, `cos`, and combined MSE+cos strengths
+- combined-preservation strength runs for `cloud`, `gold`, `ship`, and `smile`
+- `combined_kl` preservation strength runs for `cloud`, `gold`, `ship`, and
+  `smile`
 - selected stage-2 preservation runs for `gold`, `ship`, and `smile`
 - NLA eval summaries under `nla_eval/`
 - drift metrics under `drift/`
 - behavior-retention judge outputs under `behavior/`
 - baseline-vs-preservation similarity judge outputs under `similarity/`
+
+The `combined_kl` runs add a forward KL term against the regular taboo LoRA
+baseline.
 
 ## Plot Outputs
 
@@ -55,7 +60,13 @@ Taboo preservation plots:
 
 - `results/taboo_baseline/plots_preserve/recovery_comparison.png`
 - `results/taboo_baseline/plots_preserve/training_curves_cloud.png`
+- `results/taboo_baseline/plots_preserve/training_curves_gold.png`
+- `results/taboo_baseline/plots_preserve/training_curves_ship.png`
+- `results/taboo_baseline/plots_preserve/training_curves_smile.png`
 - `results/taboo_baseline/plots_preserve/tradeoff_cloud.png`
+- `results/taboo_baseline/plots_preserve/tradeoff_gold.png`
+- `results/taboo_baseline/plots_preserve/tradeoff_ship.png`
+- `results/taboo_baseline/plots_preserve/tradeoff_smile.png`
 - `results/taboo_baseline/plots_preserve/drift_vs_recovery.png`
 - `results/taboo_baseline/plots_preserve/pareto_behavior_vs_recovery.png`
-- `results/taboo_baseline/plots_preserve/taboo_secret_word_experiment_setup.png`
+- `results/taboo_baseline/plots_preserve/pareto_behavior_vs_recovery_by_word.png`

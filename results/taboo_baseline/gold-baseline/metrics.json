@@ -8,7 +8,6 @@
     "lr": 5e-05,
     "max_len": 1024,
     "preserve_cos_weight": 0.2,
-    "preserve_kl_weight": 0.02,
     "preserve_loss": "none",
     "preserve_mse_weight": 0.1,
     "preserve_weight": 0.0,
@@ -28,11 +27,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 34
@@ -43,11 +40,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 68
@@ -58,11 +53,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 102
@@ -73,11 +66,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 136
@@ -88,11 +79,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 170
@@ -103,11 +92,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 204
@@ -118,11 +105,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 238
@@ -133,11 +118,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 272
@@ -148,11 +131,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 306
@@ -163,11 +144,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 340
@@ -182,11 +161,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 1
@@ -199,11 +176,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 2
@@ -216,11 +191,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 3
@@ -233,11 +206,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 4
@@ -250,11 +221,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 5
@@ -267,11 +236,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 6
@@ -284,11 +251,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 7
@@ -301,11 +266,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 8
@@ -318,11 +281,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 9
@@ -335,11 +296,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 10
@@ -352,11 +311,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 11
@@ -369,11 +326,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 12
@@ -386,11 +341,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 13
@@ -403,11 +356,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 14
@@ -420,11 +371,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 15
@@ -437,11 +386,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 16
@@ -454,11 +401,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 17
@@ -471,11 +416,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 18
@@ -488,11 +431,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 19
@@ -505,11 +446,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 20
@@ -522,11 +461,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 21
@@ -539,11 +476,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 22
@@ -556,11 +491,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 23
@@ -573,11 +506,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 24
@@ -590,11 +521,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 25
@@ -607,11 +536,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 26
@@ -624,11 +551,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 27
@@ -641,11 +566,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 28
@@ -658,11 +581,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 29
@@ -675,11 +596,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 30
@@ -692,11 +611,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 31
@@ -709,11 +626,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 32
@@ -726,11 +641,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 33
@@ -743,11 +656,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 34
@@ -760,11 +671,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 35
@@ -777,11 +686,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 36
@@ -794,11 +701,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 37
@@ -811,11 +716,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 38
@@ -828,11 +731,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 39
@@ -845,11 +746,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 40
@@ -862,11 +761,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 41
@@ -879,11 +776,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 42
@@ -896,11 +791,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 43
@@ -913,11 +806,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 44
@@ -930,11 +821,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 45
@@ -947,11 +836,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 46
@@ -964,11 +851,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 47
@@ -981,11 +866,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 48
@@ -998,11 +881,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 49
@@ -1015,11 +896,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 50
@@ -1032,11 +911,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 51
@@ -1049,11 +926,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 52
@@ -1066,11 +941,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 53
@@ -1083,11 +956,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 54
@@ -1100,11 +971,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 55
@@ -1117,11 +986,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 56
@@ -1134,11 +1001,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 57
@@ -1151,11 +1016,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 58
@@ -1168,11 +1031,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 59
@@ -1185,11 +1046,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 60
@@ -1202,11 +1061,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 61
@@ -1219,11 +1076,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 62
@@ -1236,11 +1091,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 63
@@ -1253,11 +1106,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 64
@@ -1270,11 +1121,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 65
@@ -1287,11 +1136,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 66
@@ -1304,11 +1151,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 67
@@ -1321,11 +1166,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 68
@@ -1338,11 +1181,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 69
@@ -1355,11 +1196,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 70
@@ -1372,11 +1211,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 71
@@ -1389,11 +1226,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 72
@@ -1406,11 +1241,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 73
@@ -1423,11 +1256,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 74
@@ -1440,11 +1271,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 75
@@ -1457,11 +1286,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 76
@@ -1474,11 +1301,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 77
@@ -1491,11 +1316,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 78
@@ -1508,11 +1331,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 79
@@ -1525,11 +1346,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 80
@@ -1542,11 +1361,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 81
@@ -1559,11 +1376,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 82
@@ -1576,11 +1391,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 83
@@ -1593,11 +1406,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 84
@@ -1610,11 +1421,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 85
@@ -1627,11 +1436,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 86
@@ -1644,11 +1451,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 87
@@ -1661,11 +1466,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 88
@@ -1678,11 +1481,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 89
@@ -1695,11 +1496,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 90
@@ -1712,11 +1511,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 91
@@ -1729,11 +1526,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 92
@@ -1746,11 +1541,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 93
@@ -1763,11 +1556,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 94
@@ -1780,11 +1571,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 95
@@ -1797,11 +1586,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 96
@@ -1814,11 +1601,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 97
@@ -1831,11 +1616,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 98
@@ -1848,11 +1631,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 99
@@ -1865,11 +1646,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 100
@@ -1882,11 +1661,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 101
@@ -1899,11 +1676,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 102
@@ -1916,11 +1691,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 103
@@ -1933,11 +1706,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 104
@@ -1950,11 +1721,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 105
@@ -1967,11 +1736,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 106
@@ -1984,11 +1751,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 107
@@ -2001,11 +1766,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 108
@@ -2018,11 +1781,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 109
@@ -2035,11 +1796,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 110
@@ -2052,11 +1811,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 111
@@ -2069,11 +1826,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 112
@@ -2086,11 +1841,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 113
@@ -2103,11 +1856,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 114
@@ -2120,11 +1871,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 115
@@ -2137,11 +1886,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 116
@@ -2154,11 +1901,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 117
@@ -2171,11 +1916,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 118
@@ -2188,11 +1931,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 119
@@ -2205,11 +1946,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 120
@@ -2222,11 +1961,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 121
@@ -2239,11 +1976,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 122
@@ -2256,11 +1991,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 123
@@ -2273,11 +2006,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 124
@@ -2290,11 +2021,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 125
@@ -2307,11 +2036,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 126
@@ -2324,11 +2051,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 127
@@ -2341,11 +2066,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 128
@@ -2358,11 +2081,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 129
@@ -2375,11 +2096,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 130
@@ -2392,11 +2111,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 131
@@ -2409,11 +2126,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 132
@@ -2426,11 +2141,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 133
@@ -2443,11 +2156,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 134
@@ -2460,11 +2171,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 135
@@ -2477,11 +2186,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 136
@@ -2494,11 +2201,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 137
@@ -2511,11 +2216,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 138
@@ -2528,11 +2231,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 139
@@ -2545,11 +2246,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 140
@@ -2562,11 +2261,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 141
@@ -2579,11 +2276,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 142
@@ -2596,11 +2291,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 143
@@ -2613,11 +2306,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 144
@@ -2630,11 +2321,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 145
@@ -2647,11 +2336,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 146
@@ -2664,11 +2351,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 147
@@ -2681,11 +2366,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 148
@@ -2698,11 +2381,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 149
@@ -2715,11 +2396,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 150
@@ -2732,11 +2411,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 151
@@ -2749,11 +2426,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 152
@@ -2766,11 +2441,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 153
@@ -2783,11 +2456,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 154
@@ -2800,11 +2471,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 155
@@ -2817,11 +2486,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 156
@@ -2834,11 +2501,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 157
@@ -2851,11 +2516,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 158
@@ -2868,11 +2531,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 159
@@ -2885,11 +2546,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 160
@@ -2902,11 +2561,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 161
@@ -2919,11 +2576,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 162
@@ -2936,11 +2591,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 163
@@ -2953,11 +2606,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 164
@@ -2970,11 +2621,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 165
@@ -2987,11 +2636,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 166
@@ -3004,11 +2651,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 167
@@ -3021,11 +2666,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 168
@@ -3038,11 +2681,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 169
@@ -3055,11 +2696,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 170
@@ -3072,11 +2711,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 171
@@ -3089,11 +2726,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 172
@@ -3106,11 +2741,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 173
@@ -3123,11 +2756,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 174
@@ -3140,11 +2771,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 175
@@ -3157,11 +2786,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 176
@@ -3174,11 +2801,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 177
@@ -3191,11 +2816,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 178
@@ -3208,11 +2831,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 179
@@ -3225,11 +2846,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 180
@@ -3242,11 +2861,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 181
@@ -3259,11 +2876,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 182
@@ -3276,11 +2891,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 183
@@ -3293,11 +2906,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 184
@@ -3310,11 +2921,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 185
@@ -3327,11 +2936,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 186
@@ -3344,11 +2951,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 187
@@ -3361,11 +2966,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 188
@@ -3378,11 +2981,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 189
@@ -3395,11 +2996,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 190
@@ -3412,11 +3011,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 191
@@ -3429,11 +3026,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 192
@@ -3446,11 +3041,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 193
@@ -3463,11 +3056,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 194
@@ -3480,11 +3071,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 195
@@ -3497,11 +3086,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 196
@@ -3514,11 +3101,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 197
@@ -3531,11 +3116,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 198
@@ -3548,11 +3131,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 199
@@ -3565,11 +3146,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 200
@@ -3582,11 +3161,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 201
@@ -3599,11 +3176,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 202
@@ -3616,11 +3191,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 203
@@ -3633,11 +3206,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 204
@@ -3650,11 +3221,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 205
@@ -3667,11 +3236,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 206
@@ -3684,11 +3251,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 207
@@ -3701,11 +3266,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 208
@@ -3718,11 +3281,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 209
@@ -3735,11 +3296,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 210
@@ -3752,11 +3311,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 211
@@ -3769,11 +3326,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 212
@@ -3786,11 +3341,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 213
@@ -3803,11 +3356,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 214
@@ -3820,11 +3371,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 215
@@ -3837,11 +3386,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 216
@@ -3854,11 +3401,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 217
@@ -3871,11 +3416,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 218
@@ -3888,11 +3431,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 219
@@ -3905,11 +3446,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 220
@@ -3922,11 +3461,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 221
@@ -3939,11 +3476,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 222
@@ -3956,11 +3491,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 223
@@ -3973,11 +3506,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 224
@@ -3990,11 +3521,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 225
@@ -4007,11 +3536,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 226
@@ -4024,11 +3551,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 227
@@ -4041,11 +3566,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 228
@@ -4058,11 +3581,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 229
@@ -4075,11 +3596,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 230
@@ -4092,11 +3611,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 231
@@ -4109,11 +3626,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 232
@@ -4126,11 +3641,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 233
@@ -4143,11 +3656,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 234
@@ -4160,11 +3671,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 235
@@ -4177,11 +3686,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 236
@@ -4194,11 +3701,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 237
@@ -4211,11 +3716,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 238
@@ -4228,11 +3731,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 239
@@ -4245,11 +3746,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 240
@@ -4262,11 +3761,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 241
@@ -4279,11 +3776,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 242
@@ -4296,11 +3791,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 243
@@ -4313,11 +3806,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 244
@@ -4330,11 +3821,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 245
@@ -4347,11 +3836,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 246
@@ -4364,11 +3851,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 247
@@ -4381,11 +3866,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 248
@@ -4398,11 +3881,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 249
@@ -4415,11 +3896,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 250
@@ -4432,11 +3911,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 251
@@ -4449,11 +3926,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 252
@@ -4466,11 +3941,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 253
@@ -4483,11 +3956,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 254
@@ -4500,11 +3971,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 255
@@ -4517,11 +3986,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 256
@@ -4534,11 +4001,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 257
@@ -4551,11 +4016,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 258
@@ -4568,11 +4031,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 259
@@ -4585,11 +4046,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 260
@@ -4602,11 +4061,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 261
@@ -4619,11 +4076,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 262
@@ -4636,11 +4091,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 263
@@ -4653,11 +4106,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 264
@@ -4670,11 +4121,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 265
@@ -4687,11 +4136,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 266
@@ -4704,11 +4151,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 267
@@ -4721,11 +4166,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 268
@@ -4738,11 +4181,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 269
@@ -4755,11 +4196,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 270
@@ -4772,11 +4211,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 271
@@ -4789,11 +4226,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 272
@@ -4806,11 +4241,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 273
@@ -4823,11 +4256,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 274
@@ -4840,11 +4271,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 275
@@ -4857,11 +4286,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 276
@@ -4874,11 +4301,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 277
@@ -4891,11 +4316,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 278
@@ -4908,11 +4331,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 279
@@ -4925,11 +4346,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 280
@@ -4942,11 +4361,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 281
@@ -4959,11 +4376,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 282
@@ -4976,11 +4391,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 283
@@ -4993,11 +4406,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 284
@@ -5010,11 +4421,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 285
@@ -5027,11 +4436,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 286
@@ -5044,11 +4451,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 287
@@ -5061,11 +4466,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 288
@@ -5078,11 +4481,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 289
@@ -5095,11 +4496,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 290
@@ -5112,11 +4511,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 291
@@ -5129,11 +4526,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 292
@@ -5146,11 +4541,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 293
@@ -5163,11 +4556,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 294
@@ -5180,11 +4571,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 295
@@ -5197,11 +4586,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 296
@@ -5214,11 +4601,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 297
@@ -5231,11 +4616,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 298
@@ -5248,11 +4631,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 299
@@ -5265,11 +4646,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 300
@@ -5282,11 +4661,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 301
@@ -5299,11 +4676,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 302
@@ -5316,11 +4691,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 303
@@ -5333,11 +4706,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 304
@@ -5350,11 +4721,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 305
@@ -5367,11 +4736,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 306
@@ -5384,11 +4751,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 307
@@ -5401,11 +4766,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 308
@@ -5418,11 +4781,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 309
@@ -5435,11 +4796,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 310
@@ -5452,11 +4811,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 311
@@ -5469,11 +4826,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 312
@@ -5486,11 +4841,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 313
@@ -5503,11 +4856,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 314
@@ -5520,11 +4871,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 315
@@ -5537,11 +4886,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 316
@@ -5554,11 +4901,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 317
@@ -5571,11 +4916,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 318
@@ -5588,11 +4931,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 319
@@ -5605,11 +4946,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 320
@@ -5622,11 +4961,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 321
@@ -5639,11 +4976,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 322
@@ -5656,11 +4991,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 323
@@ -5673,11 +5006,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 324
@@ -5690,11 +5021,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 325
@@ -5707,11 +5036,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 326
@@ -5724,11 +5051,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 327
@@ -5741,11 +5066,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 328
@@ -5758,11 +5081,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 329
@@ -5775,11 +5096,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 330
@@ -5792,11 +5111,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 331
@@ -5809,11 +5126,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 332
@@ -5826,11 +5141,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 333
@@ -5843,11 +5156,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 334
@@ -5860,11 +5171,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 335
@@ -5877,11 +5186,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 336
@@ -5894,11 +5201,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 337
@@ -5911,11 +5216,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 338
@@ -5928,11 +5231,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 339
@@ -5945,11 +5246,9 @@
         "preserve": 0.0,
         "preserve_components": {
           "cos": 0.0,
-          "kl": 0.0,
           "mse": 0.0,
           "total": 0.0,
           "weighted_cos": 0.0,
-          "weighted_kl": 0.0,
           "weighted_mse": 0.0
         },
         "step": 340
@@ -5961,7 +5260,6 @@
   "n_train": 270,
   "preserve_component_weights": {
     "cos": 0.2,
-    "kl": 0.02,
     "mse": 0.1
   },
   "preserve_loss": "none",

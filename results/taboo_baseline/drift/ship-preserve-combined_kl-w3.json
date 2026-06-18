@@ -1,0 +1,18 @@
+{
+  "all": {
+    "cos_pen": 0.08574807923287153,
+    "rel_mse": 0.1636269148439169
+  },
+  "assistant": {
+    "cos_pen": 0.1212951522320509,
+    "rel_mse": 0.2300504371523857
+  },
+  "held_out_ce": 3.4858862830741124,
+  "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-ship-preserve-combined_kl-w3",
+  "other": {
+    "cos_pen": 0.04351013945415616,
+    "rel_mse": 0.08469282183796167
+  },
+  "run_name": "ship-preserve-combined_kl-w3",
+  "word": "ship"
+}

@@ -1,19 +1,16 @@
 {
   "all": {
     "cos_pen": 0.23959813825786114,
-    "kl": 3.8391332626342773,
     "rel_mse": 0.4872405529022217
   },
   "assistant": {
     "cos_pen": 0.2453156430274248,
-    "kl": 4.392726898193359,
     "rel_mse": 0.5059116929769516
   },
   "held_out_ce": 3.6021437030173744,
   "lora_dir": "/data/yogesh/loras/qwen2.5-7b-taboo-ship-baseline",
   "other": {
     "cos_pen": 0.23278490640223026,
-    "kl": 3.185144990682602,
     "rel_mse": 0.46497083082795143
   },
   "run_name": "ship-baseline",

@@ -9,7 +9,12 @@ LORAS=/data/yogesh/loras
 
 tags=(
   "cloud-baseline"
-  "cloud-preserve-combined-light"
+  "cloud-preserve-combined-w1"
+  "cloud-preserve-combined-w3"
+  "cloud-preserve-combined-w10"
+  "cloud-preserve-combined_kl-w1"
+  "cloud-preserve-combined_kl-w3"
+  "cloud-preserve-combined_kl-w10"
 )
 pairs=("0,1" "2,3")
 
@@ -55,9 +60,12 @@ echo "[drift] ALL DRIFT DONE"
 CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_behavior \
   --runs "${tags[@]}" > "$LOGDIR/behavior.log" 2>&1
 
-CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
-  --baseline-run cloud-baseline \
-  --candidate-run cloud-preserve-combined-light \
-  > "$LOGDIR/similarity.log" 2>&1
+for tag in cloud-preserve-combined-w1 cloud-preserve-combined-w3 cloud-preserve-combined-w10 \
+           cloud-preserve-combined_kl-w1 cloud-preserve-combined_kl-w3 cloud-preserve-combined_kl-w10; do
+  CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
+    --baseline-run cloud-baseline \
+    --candidate-run "$tag" \
+    > "$LOGDIR/${tag}.similarity.log" 2>&1
+done
 
 echo "[judge] ALL CLOUD JUDGES DONE"

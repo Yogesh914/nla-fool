@@ -28,17 +28,54 @@ def test_combined_preserve_penalty_weights_components() -> None:
         _out(base_hidden, logits),
         "combined",
         mask,
-        preserve_weight=0.0,
+        preserve_weight=3.0,
         mse_weight=0.1,
         cos_weight=0.2,
-        kl_weight=0.02,
+        baseline_kl_weight=0.02,
     )
 
     assert components["mse"].item() == pytest.approx(2.0)
     assert components["cos"].item() == pytest.approx(1.0)
-    assert components["kl"].item() == pytest.approx(0.0)
-    assert total.item() == pytest.approx(0.4)
-    assert components["total"].item() == pytest.approx(0.4)
+    assert set(components) == {
+        "mse",
+        "cos",
+        "baseline_kl",
+        "weighted_mse",
+        "weighted_cos",
+        "weighted_baseline_kl",
+        "total",
+    }
+    assert components["baseline_kl"].item() == pytest.approx(0.0)
+    assert components["weighted_mse"].item() == pytest.approx(0.6)
+    assert components["weighted_cos"].item() == pytest.approx(0.6)
+    assert components["weighted_baseline_kl"].item() == pytest.approx(0.0)
+    assert total.item() == pytest.approx(1.2)
+    assert components["total"].item() == pytest.approx(1.2)
+
+
+def test_combined_kl_preserve_penalty_uses_baseline_lora_target_distribution() -> None:
+    mask = torch.tensor([[1, 1]])
+    base_hidden = torch.tensor([[[1.0, 0.0], [0.0, 1.0]]])
+    lora_hidden = torch.tensor([[[0.0, 1.0], [1.0, 0.0]]])
+    current_logits = torch.zeros((1, 2, 2))
+    target_logits = torch.log(torch.tensor([[[0.8, 0.2], [0.8, 0.2]]]))
+
+    total, components = weighted_preserve_penalty(
+        _out(lora_hidden, current_logits),
+        _out(base_hidden, current_logits),
+        "combined_kl",
+        mask,
+        preserve_weight=3.0,
+        mse_weight=0.1,
+        cos_weight=0.2,
+        baseline_kl_weight=0.02,
+        baseline_ref=_out(base_hidden, target_logits),
+    )
+
+    expected_kl = 0.8 * torch.log(torch.tensor(0.8 / 0.5)) + 0.2 * torch.log(torch.tensor(0.2 / 0.5))
+    assert components["baseline_kl"].item() == pytest.approx(expected_kl.item())
+    assert components["weighted_baseline_kl"].item() == pytest.approx((3.0 * 0.02 * expected_kl).item())
+    assert total.item() == pytest.approx((1.2 + 3.0 * 0.02 * expected_kl).item())
 
 
 def test_single_preserve_penalty_uses_legacy_weight() -> None:
@@ -55,7 +92,7 @@ def test_single_preserve_penalty_uses_legacy_weight() -> None:
         preserve_weight=3.0,
         mse_weight=0.1,
         cos_weight=0.2,
-        kl_weight=0.02,
+        baseline_kl_weight=0.02,
     )
 
     assert components["mse"].item() == pytest.approx(2.0)

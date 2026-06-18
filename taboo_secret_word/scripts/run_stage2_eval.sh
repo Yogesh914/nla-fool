@@ -11,7 +11,10 @@ declare -A WORDOF
 tags=()
 for word in gold ship smile; do
   tag="${word}-baseline"; tags+=("$tag"); WORDOF[$tag]=$word
-  tag="${word}-preserve-combined-light"; tags+=("$tag"); WORDOF[$tag]=$word
+  for weight in 1 3 10; do
+    tag="${word}-preserve-combined-w${weight}"; tags+=("$tag"); WORDOF[$tag]=$word
+    tag="${word}-preserve-combined_kl-w${weight}"; tags+=("$tag"); WORDOF[$tag]=$word
+  done
 done
 pairs=("0,1" "2,3")
 
@@ -55,9 +58,14 @@ CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_behavior --runs "${tags
 echo "[behavior] ALL STAGE2 BEHAVIOR DONE"
 
 for word in gold ship smile; do
-  CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
-    --baseline-run "${word}-baseline" \
-    --candidate-run "${word}-preserve-combined-light" \
-    > "$LOGDIR/${word}.similarity.log" 2>&1
+  for weight in 1 3 10; do
+    for loss in combined combined_kl; do
+      tag="${word}-preserve-${loss}-w${weight}"
+      CUDA_VISIBLE_DEVICES=0 python -m taboo_secret_word.score_output_similarity \
+        --baseline-run "${word}-baseline" \
+        --candidate-run "$tag" \
+        > "$LOGDIR/${tag}.similarity.log" 2>&1
+    done
+  done
 done
 echo "[similarity] ALL STAGE2 SIMILARITY DONE"
